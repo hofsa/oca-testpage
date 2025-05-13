@@ -8,7 +8,7 @@ const CAPTURE_BASE_ATTRIBUTE: SchemaObject = {
   anyOf: [
     {
       $id: 'BaseAttribute',
-      enum: ['Text', 'DateTime', 'Numeric']
+      enum: ['Text', 'DateTime', 'Numeric', 'Boolean']
     },
     {
       $id: 'RefAttribute',
@@ -148,7 +148,10 @@ const BRANDING_1_1_OVERLAY_SCHEMA: SchemaObject = {
     logo: { type: 'string', pattern: IMAGE_PATTERN },
     primary_background_color: { type: 'string', pattern: HEX_COLOR_CODE_PATTERN },
     primary_field: { type: 'string' },
-    secondary_field: { type: 'string' }
+    secondary_field: { type: 'string' },
+    background_image: { type: 'string', pattern: IMAGE_PATTERN },
+    background_image_slice: { type: 'string' },
+    secondary_background_color: { type: 'string' , pattern: HEX_COLOR_CODE_PATTERN}
   },
   additionalProperties: false,
   required: [...COMMON.required, 'logo', 'primary_background_color']

@@ -65,6 +65,9 @@ export type BrandingOverlay1_1 = CommonOverlay<OverlaySpecType.BRANDING_1_1> & {
   primary_background_color: string;
   primary_field?: string;
   secondary_field?: string;
+  background_image?:string;
+  background_image_slice?:string;
+  secondary_background_color?: string;
 };
 
 export type BrandingOverlay = BrandingOverlay1_0 | BrandingOverlay1_1;
